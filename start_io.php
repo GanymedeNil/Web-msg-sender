@@ -43,7 +43,7 @@ $sender_io->on('connection', function ($socket) use ($sender_io) {
         ++$roomCount[$roomid][$uid];
         $socket->join($uid);
         $socket->uid = $uid;
-        $socket->join($roomid);
+        $socket->join('room'.$roomid);
         $socket->roomid = $roomid;
         $rid = $roomid;
         $count = count($roomCount[$roomid]);
