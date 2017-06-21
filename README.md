@@ -5,7 +5,19 @@ Web消息实时推送，支持在线用户数实时统计。基于[PHPSocket.IO]
 
 注意：此版本服务端只支持在linux系统上运行。window版本在这里下载 https://github.com/walkor/web-msg-sender-for-win
 
+新增
+=============
+支持多房间单独计算房间人数
 
+支持对单独房间进行广播
+```javascript
+//前端需传入房间id(roomid)以及用户id(uid)
+var data = {'roomid':getPar('roomid'),'uid':getPar('uid')};
+socket.on('connect', function(){
+    	socket.emit('login', data);
+    });
+  
+```
 
 效果截图
 ======
